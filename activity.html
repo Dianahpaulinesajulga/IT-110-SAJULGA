@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Practical Application Activity 2</title>
+
+<style>
+    body {
+        font-family: Arial;
+        margin: 0;
+        padding: 30px;
+        background-image: url("images/cloud.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    main {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    h3 {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    section {
+        width: 100%;
+        margin-bottom: 50px;
+        box-sizing: border-box;
+    }
+
+    figure {
+        width: 100%;
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    figure img {
+        width: 500px;
+        max-width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    figcaption {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    audio {
+        display: block;
+        margin: 20px auto;
+    }
+
+    video {
+        display: block;
+        margin: 20px auto;
+    }
+
+    ul,
+    ol {
+        width: fit-content;
+        margin: 20px auto;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    blockquote {
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+
+    <main>
+
+        <h1 id="main-heading">
+            HTML Practical Application Activity 2
+        </h1>
+
+
+        <!-- Images -->
+        <section id="images">
+
+            <h2>Images</h2>
+
+            <figure id="first-photo">
+                <img src="images/photo-1558250033-a8b1ccc28225.jpg"
+                     alt="A green mountain under a blue sky"
+                     width="500">
+
+                <figcaption>
+                    A green mountain under a blue sky.
+                </figcaption>
+            </figure>
+
+
+            <figure>
+                <img src="images/white-sailboat-floats-on-calm-ocean-water-in-panoramic-view-minimalist-seascape-features-crystal-clear-reflections-under-bright-blue-sky-with-soft-clouds-creating-serene-atmosphere-calm-free-photo.jpg"
+                     alt="A white sailboat floating on calm ocean water"
+                     width="500">
+
+                <figcaption>
+                    A white sailboat floating on calm ocean water.
+                </figcaption>
+            </figure>
+
+
+            <figure>
+                <img src="images/OIP.jpg"
+                     alt="A tulip flower in a garden"
+                     width="500">
+
+                <figcaption>
+                    A tulip flower growing in the garden.
+                </figcaption>
+            </figure>
+
+
+            <p>
+                <a href="#dom">Go to HTML DOM</a>
+            </p>
+
+        </section>
+
+
+        <!-- Hyperlinks -->
+        <section id="links">
+
+            <h2>Hyperlinks</h2>
+
+            <ul>
+                <li>
+                    <a href="dom-tree.png">
+                        View DOM Tree Screenshot
+                    </a>
+                    (internal link)
+                </li>
+
+                <li>
+                    <a href="https://www.google.com" target="_blank">
+                        Visit Google
+                    </a>
+                    (external link)
+                </li>
+
+                <li>
+                    <a href="mailto:sajulgadianahpauline@gmail.com">
+                        Email Me
+                    </a>
+                    (email link)
+                </li>
+
+                <li>
+                    <a href="#images">
+                        Go to Images
+                    </a>
+                    (same-page anchor)
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- Multimedia -->
+        <section id="multimedia">
+
+            <h2>Multimedia</h2>
+
+            <h3>Audio</h3>
+
+            <audio controls>
+                <source src="Recording.m4a" type="audio/mp4">
+                Your browser does not support the audio element.
+            </audio>
+
+
+            <h3>Video</h3>
+
+            <video controls width="320">
+                <source src="scenery.video.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+
+        </section>
+
+
+        <!-- Useful Tags -->
+        <section id="useful-tags">
+
+            <h2>Useful Tags</h2>
+
+
+            <!-- I used mark to highlight an important word. -->
+            <p>
+                Remember to <mark>save</mark> your work before closing the file.
+            </p>
+
+
+            <!-- I used abbr to show the full meaning of HTML. -->
+            <p>
+                <abbr title="HyperText Markup Language">
+                    HTML
+                </abbr>
+                is used to make web pages.
+            </p>
+
+
+            <!-- I used blockquote to show a quote. -->
+            <blockquote>
+                Practice makes perfect.
+            </blockquote>
+
+        </section>
+
+
+        <!-- HTML DOM -->
+        <section id="dom">
+
+            <h2>HTML DOM</h2>
+
+            <p>Steps to make my DOM screenshot:</p>
+
+            <ol>
+                <li>Open this page in the browser.</li>
+                <li>Right-click on the page.</li>
+                <li>Choose Inspect.</li>
+                <li>Open the Elements panel.</li>
+                <li>Find the elements with IDs.</li>
+                <li>Show at least 5 nested elements.</li>
+                <li>Take a screenshot.</li>
+                <li>Save it as dom-tree.png.</li>
+            </ol>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
+
+<!--
+The body element is the parent of the main element, while the main element contains the different sections of the webpage.
+Each section acts as a parent to the content inside it, such as headings, paragraphs, figures, and multimedia elements.
+The figure element is the parent of the img and figcaption elements.
+The img and figcaption elements are children of the figure element.
+This parent-child structure creates the hierarchy of the HTML DOM.
+-->
