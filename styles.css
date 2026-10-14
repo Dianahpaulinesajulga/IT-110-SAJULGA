@@ -1,0 +1,162 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f7f1ff 0%, #e8f4ff 45%, #fff8e6 100%);
+  color: #1d1d1d;
+  line-height: 1.6;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 1.2rem 0;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #2f2348;
+  letter-spacing: 0.08rem;
+}
+
+main {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Cascade example: the later rule wins because both selectors have equal specificity, and the browser applies the last matching declaration. */
+nav a {
+  color: #3b2d58;
+}
+
+nav a {
+  color: rgb(67, 88, 143);
+}
+
+nav {
+  margin: 1rem 0 2rem;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.7rem 1.1rem;
+  margin: 0 0.35rem;
+  background-color: #ffffff;
+  color: #3b2d58;
+  text-decoration: none;
+  border: 1px solid rgba(90, 78, 128, 0.2);
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(65, 52, 90, 0.12);
+  transition: all 0.25s ease;
+}
+
+nav a:hover {
+  background: linear-gradient(135deg, #5f4b8b, #7b6bb9);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Components */
+.card {
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto 1.5rem;
+  padding: 24px 26px;
+  border: 3px solid #d5bfdc;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 30px rgba(63, 48, 84, 0.12);
+}
+
+.card p {
+  margin-bottom: 0.75rem;
+}
+
+.intro {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #4a3d66;
+}
+
+.intro::first-letter {
+  font-size: 2.2rem;
+  color: #f28a5a;
+  font-weight: bold;
+}
+
+#about {
+  position: relative;
+  border-color: #f28a5a;
+  background: linear-gradient(135deg, #fffaf7, #fff3ee);
+}
+
+#about::after {
+  content: "Featured";
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background-color: rgba(242, 138, 90, 0.16);
+  color: rgb(142, 75, 42);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* Skill tags */
+.skills-list {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  list-style: none;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.skills-list > li {
+  background: #edf5ff;
+  color: #2c4768;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid #9dc6ef;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.hide-none {
+  display: none;
+}
+
+.hide-visibility {
+  visibility: hidden;
+}
+
+.scroll-box {
+  height: 120px;
+  overflow: auto;
+  background: linear-gradient(180deg, #ffffff 0%, #fbf9ff 100%);
+}
+
+/* The card's rendered width is 500px because box-sizing: border-box includes padding and border inside the stated width.
+   If this were content-box instead, the total width would be 500px + 52px padding + 6px border = 558px. */
+
+/* Hidden content note: display: none removes the element completely and leaves no blank space, while visibility: hidden keeps the space reserved but makes the text invisible. */
+
+/* Reflection answers:
+   1. The later rule won because both selectors had equal specificity, so the browser used the last matching declaration in the CSS file.
+   2. With content-box, the rendered width would be 500px + 26px left/right padding + 6px left/right border = 558px.
+   3. visibility: hidden is useful when you want to hide content while keeping the layout gap intact, such as a temporary message or a hidden form field.
+*/
