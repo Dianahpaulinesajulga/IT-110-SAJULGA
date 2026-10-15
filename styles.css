@@ -1,3 +1,4 @@
+```css
 /* Reset */
 * {
   margin: 0;
@@ -8,7 +9,12 @@
 /* Layout */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #f7f1ff 0%, #e8f4ff 45%, #fff8e6 100%);
+  background: linear-gradient(
+    135deg,
+    #f7f1ff 0%,
+    #e8f4ff 45%,
+    #fff8e6 100%
+  );
   color: #1d1d1d;
   line-height: 1.6;
 }
@@ -37,7 +43,7 @@ main {
   margin: 0 auto;
 }
 
-/* Cascade example: the later rule wins because both selectors have equal specificity, and the browser applies the last matching declaration. */
+/* Cascade example */
 nav a {
   color: #3b2d58;
 }
@@ -136,18 +142,39 @@ nav a:hover {
   font-weight: 600;
 }
 
+/* Display example: removes the element and its space */
 .hide-none {
   display: none;
 }
 
+/* Visibility example: hides the element but keeps its space */
 .hide-visibility {
   visibility: hidden;
+  margin: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
 }
 
+/* Notes spacing */
+#notes h2 {
+  margin-bottom: 15px;
+}
+
+#notes p:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Scroll box */
 .scroll-box {
   height: 120px;
   overflow: auto;
-  background: linear-gradient(180deg, #ffffff 0%, #fbf9ff 100%);
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fbf9ff 100%
+  );
 }
 
 /* The card's rendered width is 500px because box-sizing: border-box includes padding and border inside the stated width.
